@@ -1,33 +1,50 @@
-<div class="navbar navbar-default navbar-fixed-top">
-	<div class="navbar-header">
-		<ul class="nav navbar-nav">
-			<li><a href="{{ url_for('index') }}" class="navbar-brand">Home</a></li>
-		{% if session.user %}
-			<li><a href="{{ url_for('logout') }}">Logout</a></li>
-		{% else %}
-			<li><a href="{{ url_for('login') }}">Login</a></li>
-		{% endif %}
-		</ul>
+<style>
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+}
+.demo-layout-waterfall, mdl-layout__header-row .mdl-navigaton__link:last-of-type {
+}
+</style>
 
-		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		</button>
-	</div>
-	<div class="navbar-collapse collapse" id="navbar-main">
-		<ul class="nav navbar-nav">
-			<li><a href="{{ url_for('recent_feed') }}" class="icon-rss"></a></li>
+<div class="mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header mdl-layout__header--scroll">
+    <nav class="mdl-layout__header-row">
+      <!-- Title -->
+        <span class="mdl-layout-title"><a href="{{ url_for('home') }}">nicholas chung</a></span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation Tabs -->
+      <nav class="mdl-navigation mdl-js-ripple-effect">
+          {# <form class="" method="post" action="#{{ url_for('search') }}">
+          <div class="mdl-textfield mdl-js-textfield">
+              <textarea class="mdl-textfield__input" type="text"
+              <input type="text" name="query" class="form-control col-lg-8" placeholder="Search">
+              <input name="_csrf_token" type="hidden" value="{{ csrf_token() }}">
+          </div>
+      </form> #}
+        <a class="mdl-navigation__link" href="{{ url_for('home') }}">home</a>
+        <a class="mdl-navigation__link" href="{{ url_for('about') }}">about</a>
+		<a class="mdl-navigation__link" href="{{ url_for('index') }}">blog</a>
+		  {% if session.user %}
+		<a class="mdl-navigation__link" href="{{ url_for('users_list') }}">users</a>
+        <a class="mdl-navigation__link" href="{{ url_for('logout') }}">logout</a>
+		<a class="mdl-navigation__link" href="{{ url_for('posts') }}">posts</a>
+		<a class="mdl-navigation__link" href="{{ url_for('new_post') }}">new post</a>
+		<a class="mdl-navigation__link" href="{{ url_for('blog_settings') }}">settings</a>
+		  {% endif %}
+      </nav>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Title</span>
+    <nav class="mdl-navigation">
+		<a class="mdl-navigation__link" href="{{ url_for('index') }}">home</a>
+		<a class="mdl-navigation__link" href="">link</a>
 		{% if session.user %}
-			<li><a href="{{ url_for('users_list') }}">Users</a></li>
-			<li><a href="{{ url_for('posts') }}">Posts</a></li>
-			<li><a href="{{ url_for('new_post') }}">New post</a></li>
-			<li><a href="{{ url_for('blog_settings') }}">Settings</a></li>
+		<a class="mdl-navigation__link" href="{{ url_for('logout') }}">logout</a>
 		{% endif %}
-		</ul>
-		<form class="navbar-form navbar-right search-form" method="post" action="{{ url_for('search') }}">
-            <input type="text" name="query" class="form-control col-lg-8" placeholder="Search">
-			<input name="_csrf_token" type="hidden" value="{{ csrf_token() }}">
-		</form>
-	</div>
-</div>
+		<a class="mdl-navigation__link" href="">Link</a>
+    </nav>
+  </div>
+

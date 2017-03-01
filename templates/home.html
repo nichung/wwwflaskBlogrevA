@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	{%- block head -%}{%- include 'head.html' -%}{%- endblock -%}
+	<body>
+		{%- block nav -%}{%- include 'nav.html' -%}{%- endblock -%}
+			<main class="mdl-layout__content">
+				<div class="page-content">
+					<div class="mdl-grid">
+						{%- if recent_posts -%}
+                		<div class="mdl-cell mdl-cell--10-col">
+							<h2>Recent articles</h2>
+							<hr>
+							<ul class="mdl-list">
+								{% for post in recent_posts %}
+								<li class="mdl-list__item">
+									<a href="{{ url_for('single_post', permalink=post['permalink']) }}"><span class="mdl-list__item-primary-content">:* {{ post['title'] | safe }}</span></a></li>
+								{% endfor %}
+							</ul>
+						</div>
+						{%- endif -%}
+					</div>
+				</div>
+			</main>
+	</body>
+</html>

@@ -2,6 +2,9 @@ import cgi
 import os
 from flask import Flask, render_template, abort, url_for, request, flash, session, redirect
 from flaskext.markdown import Markdown
+from flask_wtf import form, RecaptchaField
+from flask_wtf.file import FileField
+from wtforms import TextField, HiddenField, ValidationError, RadioField, BooleanField, SubmitField, IntegerField, FormField, validators
 from mdx_github_gists import GitHubGistExtension
 from mdx_strike import StrikeExtension
 from mdx_quote import QuoteExtension
@@ -14,7 +17,7 @@ import settings
 from helper_functions import *
 
 
-app = Flask('FlaskBlog')
+app = Flask('NichBlog')
 md = Markdown(app)
 md.register_extension(GitHubGistExtension)
 md.register_extension(StrikeExtension)
@@ -32,6 +35,13 @@ def index(page):
     pag = pagination.Pagination(page, app.config['PER_PAGE'], count)
     return render_template('index.html', posts=posts['data'], pagination=pag, meta_title=app.config['BLOG_TITLE'])
 
+@app.route('/home')
+def home():
+    return render_template('home.html',)
+
+@app.route('/about')
+def about():
+    return render_template('about.html',)
 
 @app.route('/tag/<tag>', defaults={'page': 1})
 @app.route('/tag/<tag>/page-<int:page>')

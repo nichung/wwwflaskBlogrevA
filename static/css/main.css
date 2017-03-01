@@ -21,7 +21,7 @@ body {
     padding: 0 10px;
 	margin-top: 10px;
  }
-.infopanel .tags {margin:5px 0 5px 0;}
+/* .infopanel .tags {margin:5px 0 5px 0;} */
 
 .pagination-wrap {text-align: center;}
 .pagination {
@@ -57,7 +57,7 @@ footer a {color: #d6d8dd;}
 .sidebar {
 	float: right;
 	position: absolute;
-	top: 92px;
+	/* top: 92px; TODO: delete */
 	right: 5px;
 }
 .sidebar hr {margin-top:0;}
@@ -161,3 +161,4 @@ input[type='checkbox'] {
 @media only screen and (max-width: 767px) {
     .search-form {width:100%;}
 }
+

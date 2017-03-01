@@ -1,0 +1,53 @@
+/* transparent nav bar */
+.mdl-layout__header-row .mdl-navigation__link {
+}
+
+main.mdl-layout__content {
+    z-index: 0;
+}
+
+/* nav bar */
+body {
+    padding-top: 0px !important;
+}
+
+.mdl-navigation__link {
+    border-bottom: 3px solid transparent;
+}
+
+.mdl-navigation__link:hover, .mdl-navigation__link:active {
+    border-bottom: 3px solid rgb(255,64,129);
+}
+
+.mdl-layout__container {
+    position: inherit;
+}
+
+/* post cards */
+.mdl-card {
+    width: 360px;
+    height: 360px;
+}
+
+.infopanel {
+    display: inline-table;
+}
+
+
+.mdl-card__title {
+    max-height: 180px;
+}
+
+/* fixed sidebar */
+.sidebar {
+    height: 100%;
+    bottom: 0px;
+}
+
+.sidebar .mdl-card {
+    height: 100%;
+}
+
+.sidebar div .mdl-card__title {
+    max-height: 75px;
+}
