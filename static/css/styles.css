@@ -1,14 +1,10 @@
-/* transparent nav bar */
-.mdl-layout__header-row .mdl-navigation__link {
+/* nav bar */
+body {
+    padding-top: 0px !important;
 }
 
 main.mdl-layout__content {
     z-index: 0;
-}
-
-/* nav bar */
-body {
-    padding-top: 0px !important;
 }
 
 .mdl-navigation__link {
@@ -23,31 +19,56 @@ body {
     position: inherit;
 }
 
+.mdl-layout__header {
+    background-color: rgba(181, 85, 63, 0.34);
+}
+
+.mdl-layout-title a {
+    color: #fff;
+}
+
 /* post cards */
-.mdl-card {
-    width: 360px;
-    height: 360px;
+.post-loop {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mdl-card-a {
+    width: 99%;
+}
+
+.mdl-card-b {
+    width: 48%;
+    float: left;
+    margin: 2em 2em 2em 0;
+}
+
+.mdl-card-b:after {
+    width: 48%;
+    float: left;
+    margin-right: 2em;
+    clear: both;
+    display: block;
+}
+
+.mdl-card-c {
+    width: 48%;
+}
+
+.mdl-card-c:after {
+    width: 48%;
+    clear: both;
+    display: block;
 }
 
 .infopanel {
     display: inline-table;
 }
 
+.mdl-card {
+    max-height: 512px;
+}
 
 .mdl-card__title {
     max-height: 180px;
-}
-
-/* fixed sidebar */
-.sidebar {
-    height: 100%;
-    bottom: 0px;
-}
-
-.sidebar .mdl-card {
-    height: 100%;
-}
-
-.sidebar div .mdl-card__title {
-    max-height: 75px;
 }

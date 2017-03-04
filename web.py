@@ -26,8 +26,8 @@ md.register_extension(MultilineCodeExtension)
 app.config.from_object('config')
 
 
-@app.route('/', defaults={'page': 1})
-@app.route('/page-<int:page>')
+@app.route('/blog', defaults={'page': 1})
+@app.route('/blog-<int:page>')
 def index(page):
     skip = (page - 1) * int(app.config['PER_PAGE'])
     posts = postClass.get_posts(int(app.config['PER_PAGE']), skip)
@@ -35,7 +35,7 @@ def index(page):
     pag = pagination.Pagination(page, app.config['PER_PAGE'], count)
     return render_template('index.html', posts=posts['data'], pagination=pag, meta_title=app.config['BLOG_TITLE'])
 
-@app.route('/home')
+@app.route('/')
 def home():
     return render_template('home.html',)
 
