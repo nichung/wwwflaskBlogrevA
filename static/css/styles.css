@@ -4,7 +4,7 @@ body {
 }
 
 /* general style: fonts */
-.mdl-layout__title, .mdl-layout-title {
+.mdl-layout__title, .mdl-layout-title, .mdl-card__title-text {
     font-family: 'Alfa Slab One', cursive;
 }
 
@@ -40,7 +40,7 @@ main.mdl-layout__content {
 
 .mdl-navigation__link:hover, .mdl-navigation__link:active {
     /* border-bottom: 10px solid #f9cc9d; */
-    border-bottom: 10px solid #f5f5dc;
+    border-bottom: 10px solid #DCE775;
 }
 
 .mdl-layout__container {
@@ -65,7 +65,9 @@ main.mdl-layout__content {
 
 /* nav bar: side */
 .mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover {
-    background-color: #757575;
+    background: #8e9eab; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #8e9eab , #eef2f3); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #8e9eab , #eef2f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover {
@@ -123,6 +125,16 @@ main.mdl-layout__content {
 
 .mdl-card__title {
     max-height: 180px;
+}
+
+/* post cards: header text */
+.mdl-card__title-text a {
+    color: #fff;
+}
+
+.mdl-card__title-text:hover,
+.mdl-card__title-text:active {
+    border-bottom: 10px solid #DCE775;
 }
 
 /* post cards: about page */
