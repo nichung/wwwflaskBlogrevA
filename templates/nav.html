@@ -2,7 +2,7 @@
   <header class="mdl-layout__header mdl-layout__header--scroll">
     <nav class="mdl-layout__header-row">
       <!-- Title -->
-        <span class="mdl-layout-title"><a href="{{ url_for('home') }}">nicholas chung</a></span>
+        <span class="mdl-layout-title"><a href="{{ url_for('home') }}">Nicholas Chung</a></span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation Tabs -->
@@ -27,7 +27,7 @@
       </nav>
   </header>
   <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">nicholas chung</span>
+    <span class="mdl-layout-title">Nicholas Chung</span>
     <nav class="mdl-navigation">
 		<a class="mdl-navigation__link" href="{{ url_for('index') }}">home</a>
 		<a class="mdl-navigation__link" href="">link</a>
@@ -44,23 +44,19 @@
             <input name="_csrf_token" type="hidden" value="{{ csrf_token() }}">
         </div>
         </form> #}
-        <hr>
         <span class="mdl-layout-title">Recent articles</span>
-        <hr>
-        <ul>
+        <nav class="mdl-navigation">
             {% for post in recent_posts %}
-            <li><a href="{{ url_for('single_post', permalink=post['permalink']) }}">{{ post['title'] | safe }}</a></li>
+            <a class="mdl-navigation__link" href="{{ url_for('single_post', permalink=post['permalink']) }}">{{ post['title'] | safe }}</a></li>
             {% endfor %}
-        </ul>
         {%- if tags -%}
-        <hr>
-        <span class="mdl-layout-title">Top tags</span>
-        <hr>
-        <ul>
+        </nav>
+        <span class="mdl-layout-title">Top Topics</span>
+        <nav class="mdl-navigation">
             {% for tag in tags %}
-            <li><a href="{{ url_for('posts_by_tag', page=1, tag=tag['title']) }}">{{ tag['title'] }} <sup class="badge">{{ tag['count'] }}</sup></a></li>
+            <a class="mdl-navigation__link" href="{{ url_for('posts_by_tag', page=1, tag=tag['title']) }}">{{ tag['title'] }} <sup class="badge">{{ tag['count'] }}</sup></a></li>
             {% endfor %}
-        </ul>
         {%- endif -%}
+        </nav>
   </div>
 
