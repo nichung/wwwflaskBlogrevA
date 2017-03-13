@@ -1,4 +1,9 @@
-/* fonts */
+/* general styles */
+body {
+    /* background-color: #ccc; */
+}
+
+/* general style: fonts */
 .mdl-layout__title, .mdl-layout-title {
     font-family: 'Alfa Slab One', cursive;
 }
@@ -10,6 +15,7 @@ body, h2, h3, h4, h5, h6, p, li, ul, span {
 a:hover, a:focus {
     text-decoration: none;
 }
+
 /* title */
 .mdl-layout-title a {
     font-size: 30px;
@@ -33,7 +39,8 @@ main.mdl-layout__content {
 }
 
 .mdl-navigation__link:hover, .mdl-navigation__link:active {
-    border-bottom: 10px solid #f9cc9d;
+    /* border-bottom: 10px solid #f9cc9d; */
+    border-bottom: 10px solid #f5f5dc;
 }
 
 .mdl-layout__container {
@@ -41,7 +48,10 @@ main.mdl-layout__content {
 }
 
 .mdl-layout__header {
-    background-color: #d9a89d;
+    background: #8e9eab; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #8e9eab , #eef2f3); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #8e9eab , #eef2f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* background-color: #757575; */
 }
 
 .mdl-layout-title a {
@@ -55,7 +65,7 @@ main.mdl-layout__content {
 
 /* nav bar: side */
 .mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover {
-    background-color: #d9a89d;
+    background-color: #757575;
 }
 
 .mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover {
@@ -63,6 +73,11 @@ main.mdl-layout__content {
 }
 
 /* post cards */
+.post {
+    margin-top: 6em;
+    margin-bottom: 6em;
+}
+
 .post-loop {
     margin-left: auto;
     margin-right: auto;
@@ -75,7 +90,7 @@ main.mdl-layout__content {
 .mdl-card-b {
     width: 48%;
     float: left;
-    margin: 2em 2em 2em 0;
+    margin: 0em 2em 2em 0;
 }
 
 .mdl-card-b:after {
@@ -102,6 +117,8 @@ main.mdl-layout__content {
 
 .mdl-card {
     max-height: 512px;
+    background-color: #d7dee0;
+    border-radius: 0px;
 }
 
 .mdl-card__title {
@@ -114,3 +131,4 @@ main.mdl-layout__content {
     margin-right: auto;
     margin-top: 2em;
 }
+
