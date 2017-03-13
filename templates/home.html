@@ -13,7 +13,7 @@
 							<ul class="mdl-list">
 								{% for post in recent_posts %}
 								<li class="mdl-list__item">
-									<a href="{{ url_for('single_post', permalink=post['permalink']) }}"><span class="mdl-list__item-primary-content">:* {{ post['title'] | safe }}</span></a></li>
+									<a href="{{ url_for('single_post', permalink=post['permalink']) }}"><span class="mdl-list__item-primary-content">{{ post['title'] | safe }}</span></a></li>
 								{% endfor %}
 							</ul>
 						</div>
