@@ -146,7 +146,7 @@ class Post:
 
     @staticmethod
     def validate_post_data(post_data):
-        permalink = random_string(12)
+        permalink = post_data['title'] # todo: reject if slug not unique and fix whitespace
         #exp = re.compile('\W')
         #whitespace = re.compile('\s')
         #temp_title = whitespace.sub("_", post_data['title'])

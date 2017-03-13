@@ -13,8 +13,8 @@
 	{% endif %}
 
 	<div class="post clearfix">
-		<div class="row">
-			<div class="col-lg-8">
+		<div class="mdl-grid">
+			<div class="mdl-cell mdl-cell--8-col">
 				<div class="page-header">
 					<h1>New post</h1>
 				</div>
@@ -51,8 +51,8 @@
 						<div class="form-group">
 							<input type="hidden" name="post-preview" id="preview">
 							<input name="_csrf_token" type="hidden" value="{{ csrf_token() }}">
-						    <input id="post-submit" type="submit" class="btn btn-primary" value="Submit">
-							<input id="post-preview" type="submit" class="btn" value="Preview">
+						    <input id="post-submit" type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" value="Submit">
+							<input id="post-preview" type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" value="Preview">
 					    </div>
 					</form>
 				</div>
