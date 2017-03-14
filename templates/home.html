@@ -5,21 +5,54 @@
 		{%- block nav -%}{%- include 'nav.html' -%}{%- endblock -%}
 			<main class="mdl-layout__content">
 				<div class="page-content">
-					<div class="mdl-grid">
-						{%- if recent_posts -%}
-                		<div class="mdl-cell mdl-cell--10-col">
-							<h2>Recent articles</h2>
-							<hr>
-							<ul class="mdl-list">
-								{% for post in recent_posts %}
-								<li class="mdl-list__item">
-									<a href="{{ url_for('single_post', permalink=post['permalink']) }}"><span class="mdl-list__item-primary-content">{{ post['title'] | safe }}</span></a></li>
-								{% endfor %}
-							</ul>
+					<div class="mdl-grid mdl-grid--no-spacing">
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone
+						top-left--desktop">
+							<p>3/12 desktop (top-left) | 4/8 tablet (top left) | 4/4 phone (1st)</p>
 						</div>
-						{%- endif -%}
+						<div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone top-center--desktop">
+							<p>4/12 desktop (top-center) | 4/8 tablet (top right) | 4/4 phone (2nd)</p>
+							<h2>hello.</h2>
+							<p>I'm a former policy jock turned tech and data person. I use my powers
+								outside of work for my own creative and social good pursuits.</p>
+						</div>
+						<div class="mdl-cell mdl-cell--5-col mdl-cell--8-col-tablet mdl-cell--4-col-phone top-right--desktop">
+							<p>5/12 desktop (top-right) | 8/8 tablet (2nd row) | 4/4 phone (3rd)</p>
+						</div>
+					</div>
+					<div class="mdl-grid mdl-grid--no-spacing">
+						<div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet mdl-cell--4-col-phone  center-left--desktop">
+							<p>8/12 desktop (middle-left) | 4/8 tablet (4th row left) | 4/4 phone (4th)</p>
+							<h2>data projects.</h2>
+							<p>data science and visualization product and process.</p>
+						</div>
+						<div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone center-right--desktop">
+							<p>4/12 desktop (middle-right) | 4/8 tablet (4th row right) | 4/4 phone (5th)</p>
+							<h2>writing.</h2>
+							<p>essays and other text-based projects.</p>
+						</div>
+					</div>
+					<div class="mdl-grid mdl-grid--no-spacing">
+						<div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet mdl-cell--4-col-phone bottom-left--desktop">
+							<p>5/12 desktop (bottom-left) | 4/8 tablet (5th row left) | 4/4 phone (6th)</h4>
+						</div>
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone bottom-center--desktop">
+							<p>3/12 desktop (bottom-center) | 4/8 tablet (5th row right) | 4/4 phone (7th)</p>
+							<h2>contact.</h2>
+							<p>email me@nichchung.com
+								linkedin
+								twitter
+								github
+								soundcloud</p>
+						</div>
+						<div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-phone mdl-cell--4-col-phone bottom-right--desktop">
+							<p>4/12 desktop (bottom-right) | 8/8 tablet (6th row) | 4/4 phone (8th)</p>
+						</div>
 					</div>
 				</div>
 			</main>
 	</body>
 </html>
+
+
+

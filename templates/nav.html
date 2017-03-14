@@ -29,12 +29,16 @@
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">Nicholas Chung</span>
     <nav class="mdl-navigation">
-		<a class="mdl-navigation__link" href="{{ url_for('index') }}">home</a>
-		<a class="mdl-navigation__link" href="">link</a>
+        <a class="mdl-navigation__link" href="{{ url_for('home') }}">home</a>
+        <a class="mdl-navigation__link" href="{{ url_for('about') }}">about</a>
+		<a class="mdl-navigation__link" href="{{ url_for('index') }}">blog</a>
 		{% if session.user %}
-		<a class="mdl-navigation__link" href="{{ url_for('logout') }}">logout</a>
+        <a class="mdl-navigation__link" href="{{ url_for('users_list') }}">users</a>
+        <a class="mdl-navigation__link" href="{{ url_for('logout') }}">logout</a>
+        <a class="mdl-navigation__link" href="{{ url_for('posts') }}">posts</a>
+        <a class="mdl-navigation__link" href="{{ url_for('new_post') }}">new post</a>
+        <a class="mdl-navigation__link" href="{{ url_for('blog_settings') }}">settings</a>
 		{% endif %}
-		<a class="mdl-navigation__link" href="">Link</a>
     </nav>
         {# <hr>
         <form class="" method="post" action="{{ url_for('search') }}">
