@@ -91,7 +91,8 @@ main.mdl-layout__content {
     margin-bottom: 6em; */
 }
 
-.mdl-grid.mdl-grid--no-spacing>.mdl-cell {
+.mdl-grid.mdl-grid--no-spacing>.mdl-cell,
+.post .mdl-grid .mdl-cell {
     margin-left: auto;
     margin-right: auto;
 }
@@ -191,7 +192,7 @@ main.mdl-layout__content {
     color: #fff;
 }
 
-.post img {
+/* .post img {
     position: absolute;
     left: -9999px;
     right: -9999px;
@@ -200,7 +201,7 @@ main.mdl-layout__content {
     margin: auto;
     min-width: 100%;
     min-height: 100%;
-    z-index: -1;
+    z-index: -1; */
 }
 
 /* homepage: grid */
