@@ -116,6 +116,7 @@ class Post:
 
         return self.response
 
+    # edit post, reset date and permalink
     def edit_post(self, post_id, post_data):
         self.response['error'] = None
         del post_data['date']
@@ -131,6 +132,7 @@ class Post:
 
         return self.response
 
+    # delete post
     def delete_post(self, post_id):
         self.response['error'] = None
         try:
@@ -144,6 +146,7 @@ class Post:
 
         return self.response
 
+    # validate post data
     @staticmethod
     def validate_post_data(post_data):
         permalink = post_data['title'] # todo: reject if slug not unique and fix whitespace

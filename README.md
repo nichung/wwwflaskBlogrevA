@@ -13,7 +13,7 @@ pass:demo
 - [Python](http://python.org/)
 - [Flask](http://flask.pocoo.org/)
 - [MongoDB](http://www.mongodb.org/)
-- [Bootstrap 3](http://getbootstrap.com/)
+- [Material Design Lite](https://getmdl.io/)
 - [jQuery](http://jquery.com)
 - [Lightbox 2](https://github.com/lokesh/lightbox2)
 - [Markdown](http://daringfireball.net/projects/markdown/syntax)

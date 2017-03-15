@@ -9,9 +9,10 @@
       <nav class="mdl-navigation mdl-js-ripple-effect">
           {# <form class="" method="post" action="{{ url_for('search') }}">
           <div class="mdl-textfield mdl-js-textfield">
-              <textarea class="mdl-textfield__input" type="text"
+              <textarea class="mdl-textfield__input" type="text">
               <input type="text" name="query" class="form-control col-lg-8" placeholder="Search">
               <input name="_csrf_token" type="hidden" value="{{ csrf_token() }}">
+              </textarea>
           </div>
       </form> #}
         <a class="mdl-navigation__link" href="{{ url_for('home') }}">home</a>
@@ -43,9 +44,10 @@
         {# <hr>
         <form class="" method="post" action="{{ url_for('search') }}">
         <div class="mdl-textfield mdl-js-textfield">
-            <textarea class="mdl-textfield__input" type="text"
+            <textarea class="mdl-textfield__input" type="text">
             <input type="text" name="query" class="form-control col-lg-8" placeholder="Search">
             <input name="_csrf_token" type="hidden" value="{{ csrf_token() }}">
+            </textarea>
         </div>
         </form> #}
         <span class="mdl-layout-title">Recent articles</span>
@@ -63,4 +65,3 @@
         {%- endif -%}
         </nav>
   </div>
-
