@@ -1,13 +1,6 @@
 # flask-blog
 
-simple blog ~~engine~~ written on [Flask](http://flask.pocoo.org/)
-
-# Demo:
-you can try it [here](http://flask-blog-demo.herokuapp.com/)
-
-login:demo
-
-pass:demo
+simple blog ~~engine~~ forked from [dmaslov](https://github.com/dmaslov/flask-blog.git) written on [Flask](http://flask.pocoo.org/)
 
 # Under the hood:
 - [Python](http://python.org/)
@@ -20,7 +13,7 @@ pass:demo
 - [Polymer](http://www.polymer-project.org)
 
 
-# What it can:
+# What it can do:
 - create/preview/update/delete articles;
 - create/update/delete users;
 - search;
@@ -37,9 +30,9 @@ pass:demo
 
 
 # Installation:
-`git clone https://github.com/dmaslov/flask-blog.git`
+`git clone https://github.com/nichung/wwwflaskBlogrevA.git`
 
-`cd flask-blog`
+`cd wwwflaskBlogrevA`
 
 `virtualenv --no-site-packages ./env`
 
