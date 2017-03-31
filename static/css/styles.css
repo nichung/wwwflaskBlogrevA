@@ -4,7 +4,7 @@ body {
 }
 
 /* general style: fonts */
-.mdl-layout__title, .mdl-layout-title, .mdl-card__title-text {
+h1, .mdl-layout__title, .mdl-layout-title, .mdl-card__title-text {
     font-family: 'Alfa Slab One', cursive;
 }
 
@@ -14,6 +14,18 @@ body, h2, h3, h4, h5, h6, p, li, ul, span {
 
 a:hover, a:focus {
     text-decoration: none;
+}
+
+/* general style: top margins */
+.about-page__content, .blog-index__content {
+    margin-top: 70px;
+}
+
+
+/* blog post */
+
+.page-header h1 {
+    font-size: 3em;
 }
 
 /* title */
@@ -182,16 +194,6 @@ main.mdl-layout__content {
     color: #fff;
 }
 
-/* post cards: background image */
-/* .mdl-card__actions.mdl-card--border {
-    background-color: #d7dee0;
-    opacity: 0.97;
-}
-
-.mdl-card__supporting-text p {
-    color: #fff;
-}
-
 .post img {
     position: absolute;
     left: -9999px;
@@ -241,3 +243,45 @@ main.mdl-layout__content {
     border-color: transparent rgba(154, 168, 180, 0.15) rgba(128, 160, 187, 0.06) transparent;
 }
 
+/* about */
+.about-page__content {
+    width: 66.666666667%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-page__content .mdl-grid {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 500px;
+}
+
+@media (max-width: 839px) and (min-width: 480px) {
+.mdl-layout__content .about-page__content .mdl-grid {
+    flex-direction: inherit;
+}
+}
+
+@media (max-width: 479px) {
+.mdl-layout__content .about-page__content .mdl-grid {
+    flex-direction: inherit;
+}
+}
+
+.left-desktop {
+    min-height: 500px;
+}
+
+.bottom-right--desktop {
+    flex: 1 0;
+}
+
+.about-page__content .mdl-grid--no-spacing .mdl-cell,
+.about-page__content .mdl-grid--no-spacing .mdl-cell {
+    background-color: #d7dee0;
+    height: 33.33vh;
+    border-style: solid;
+    border-width: 0 130px 170px 0;
+    border-color: transparent rgba(154, 168, 180, 0.65) rgba(128, 160, 187, 0.36) transparent;
+}
