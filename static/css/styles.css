@@ -17,7 +17,11 @@ a:hover, a:focus {
 }
 
 /* general style: top margins */
-.about-page__content, .blog-index__content {
+.about-page__content {
+    margin-top: 70px;
+}
+
+.mdl-layout__content .blog-index__content .mdl-cell {
     margin-top: 70px;
 }
 
