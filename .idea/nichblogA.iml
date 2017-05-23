@@ -5,5 +5,7 @@
     <orderEntry type="jdk" jdkName="Python 2.7.5 virtualenv at ~/Workbench/wwwflaskBlogrevA/venv" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="processing" />
+    <orderEntry type="module" module-name="datavis-A" />
+    <orderEntry type="module" module-name="learn_python" />
   </component>
 </module>

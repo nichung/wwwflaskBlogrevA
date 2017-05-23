@@ -224,9 +224,9 @@ main.mdl-layout__content {
 .bottom-left--desktop {
     background-color: rgba(205, 220, 57, 0.65);
     height: 33.33vh;
-    /* border-style: solid;
+    border-style: solid;
     border-width: 0 130px 170px 0;
-    border-color: transparent #ccdc39 rgba(243, 255, 138, 0.65) transparent; */
+    border-color: transparent #ccdc39 rgba(243, 255, 138, 0.65) transparent;
 }
 
 .top-left--desktop,
@@ -234,17 +234,17 @@ main.mdl-layout__content {
 .bottom-center--desktop {
     background-color: #d7dee0;
     height: 33.33vh;
-    /* border-style: solid;
+    border-style: solid;
     border-width: 0 130px 170px 0;
-    border-color: transparent rgba(154, 168, 180, 0.65) rgba(128, 160, 187, 0.36) transparent; */
+    border-color: transparent rgba(154, 168, 180, 0.65) rgba(128, 160, 187, 0.36) transparent;
 }
 
 .center-left--desktop,
 .bottom-right--desktop {
     height: 33.33vh;
-    /* border-style: solid;
+    border-style: solid;
     border-width: 0 130px 170px 0;
-    border-color: transparent rgba(154, 168, 180, 0.15) rgba(128, 160, 187, 0.06) transparent; */
+    border-color: transparent rgba(154, 168, 180, 0.15) rgba(128, 160, 187, 0.06) transparent;
 }
 
 /* about */
