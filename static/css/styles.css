@@ -25,9 +25,7 @@ a:hover, a:focus {
     margin-top: 70px;
 }
 
-
 /* blog post */
-
 .page-header h1 {
     font-size: 3em;
 }
@@ -210,41 +208,64 @@ main.mdl-layout__content {
     z-index: -1; */
 }
 
-/* homepage: grid */
-.page-content .mdl-grid--no-spacing .mdl-cell:active,
-.page-content .mdl-grid--no-spacing .mdl-cell:hover {
-    border-style: solid;
-    border-width: 0 130px 170px 0;
-    border-color: transparent rgba(154, 168, 180, 0.15) rgba(128, 160, 187, 0.06) transparent;
-    box-shadow: 0 5px 5px 0 rgba(0,0,0,.14), 0 4px 2px -1px rgba(0,0,0,.2), 0 2px 6px 0 rgba(0,0,0,.12);
+/* home */
+.home-page__content {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 75px;
 }
 
-.top-center--desktop,
-.center-right--desktop,
-.bottom-left--desktop {
-    background-color: rgba(205, 220, 57, 0.65);
-    height: 33.33vh;
-    /* border-style: solid;
-    border-width: 0 130px 170px 0;
-    border-color: transparent #ccdc39 rgba(243, 255, 138, 0.65) transparent; */
+.home-page__content .mdl-grid--flex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 600px;
 }
 
-.top-left--desktop,
-.top-right--desktop,
-.bottom-center--desktop {
-    background-color: #d7dee0;
-    height: 33.33vh;
-    /* border-style: solid;
-    border-width: 0 130px 170px 0;
-    border-color: transparent rgba(154, 168, 180, 0.65) rgba(128, 160, 187, 0.36) transparent; */
+@media (max-width: 839px) and (min-width: 480px) {
+.mdl-layout__content .home-page__content .mdl-grid {
+    flex-direction: inherit;
+}
 }
 
-.center-left--desktop,
-.bottom-right--desktop {
-    height: 33.33vh;
-    /* border-style: solid;
-    border-width: 0 130px 170px 0;
-    border-color: transparent rgba(154, 168, 180, 0.15) rgba(128, 160, 187, 0.06) transparent; */
+@media (max-width: 479px) {
+.mdl-layout__content .home-page__content .mdl-grid {
+    flex-direction: inherit;
+}
+}
+
+.right-one--desktop {
+    min-height: 600px;
+}
+
+.left-one--desktop {
+    flex: 1 0;
+}
+
+.left-two--desktop {
+    flex: 2 0;
+}
+
+.left-three--desktop {
+    flex: 3 0;
+}
+
+.left-four--desktop {
+    flex: 4 0;
+}
+
+.left-five--desktop {
+    flex: 5 0;
+}
+
+.home-page__content .mdl-grid .mdl-cell--6-col {
+    max-height: 10vh;
+}
+
+/* home: animated portrait */
+.right-one--desktop .portrait {
+    max-height: 300px;
 }
 
 /* about */

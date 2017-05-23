@@ -4,57 +4,59 @@
 	<body>
 		{%- block nav -%}{%- include 'nav.html' -%}{%- endblock -%}
 			<main class="mdl-layout__content">
-				<div class="page-content">
+				<div class="page-content home-page__content">
 					<div class="mdl-grid mdl-grid--no-spacing">
-						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone
-						top-left--desktop">
-							{# 3/12 desktop (top-left) | 4/8 tablet (top left) | 4/4 phone (1st) #}
-						</div>
-						<div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone top-center--desktop">
-							{# 4/12 desktop (top-center) | 4/8 tablet (top right) | 4/4 phone (2nd) #}
-							<h2>hello.</h2>
-							<p>I'm a former policy jock turned tech and data person. I use my powers
-								outside of work for my own creative and social good pursuits.</p>
-						</div>
-						<div class="mdl-cell mdl-cell--5-col mdl-cell--8-col-tablet mdl-cell--4-col-phone top-right--desktop">
-							{# 5/12 desktop (top-right) | 8/8 tablet (2nd row) | 4/4 phone (3rd) #}
+						<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet mdl-cell--4-col-phone top-center--desktop">
+							{# 12/12 desktop (top-center) | 4/8 tablet (top right) | 4/4 phone (2nd) #}
+							<h2>nicholas chung</h2>
+							<p>civic tech and policy.</p>
 						</div>
 					</div>
-					<div class="mdl-grid mdl-grid--no-spacing">
-						<div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet mdl-cell--4-col-phone  center-left--desktop">
-							{# 5/12 desktop (middle-left) | 4/8 tablet (4th row left) | 4/4 phone (4th) #}
-							<h2>data projects.</h2>
-							<p>data science and visualization product and process.</p>
+					<div class="mdl-grid mdl-grid--no-spacing mdl-grid--flex">
+						<div class="left-one--desktop mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+							{# 6/12 desktop (left-first) | 4/8 tablet (5th row right) | 4/4 phone (5th) #}
+							<h4>projects.</h4>
+							{# link header to page with blog results on the following content: #}
+							<p>civic tech, policy, and open data.</p>
 						</div>
-						<div class="mdl-cell mdl-cell--3-col mdl-cell--order-3-tablet mdl-cell--4-col-tablet mdl-cell--4-col-phone bottom-center--desktop">
-							{# 3/12 desktop (bottom-center) | 4/8 tablet (5th row left) | 4/4 phone (7th) #}
-						</div>
-						<div class="mdl-cell mdl-cell--4-col mdl-cell--order-2-tablet mdl-cell--4-col-tablet mdl-cell--4-col-phone center-right--desktop">
-							{# 4/12 desktop (middle-right) | 4/8 tablet (5th row right) | 4/4 phone (5th) #}
-							<h2>writing.</h2>
+						<div class="left-two--desktop mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+							{# 6/12 desktop (left-second) | 4/8 tablet (5th row right) | 4/4 phone (5th) #}
+							<h4>writing.</h4>
+							{# link header to page with blog results on the following content: #}
 							<p>essays and other text-based projects.</p>
 						</div>
-					</div>
-					<div class="mdl-grid mdl-grid--no-spacing">
-						<div class="mdl-cell mdl-cell--5-col mdl-cell--order-2-tablet mdl-cell--4-col-tablet mdl-cell--4-col-phone bottom-left--desktop">
-							{# 5/12 desktop (bottom-left) | 4/8 tablet (5th row left) | 4/4 phone (6th) #}
-							<h2>contact.</h2>
-							<p>email me@nichchung.com
-								linkedin
-								twitter
-								github
-								soundcloud</p>
+						<div class="left-three--desktop mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+							{# 6/12 desktop (left-third) | 4/8 tablet (5th row right) | 4/4 phone (5th) #}
+							<h4>tools.</h4>
+							{# link header to page with blog results on the following content: #}
+							<p>documentation.</p>
 						</div>
-						<div class="mdl-cell mdl-cell--3-col mdl-cell--order-1-tablet mdl-cell--4-col-tablet mdl-cell--4-col-phone bottom-center--desktop">
-							{# 3/12 desktop (bottom-center) | 4/8 tablet (5th row right) | 4/4 phone (7th) #}
+						<div class="left-four--desktop mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+							{# 6/12 desktop (left-fourth) | 4/8 tablet (5th row right) | 4/4 phone (5th) #}
+							<h4>about.</h4>
+							{# link header to about page: #}
+							<p>who i am.</p>
 						</div>
-						<div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-phone mdl-cell--4-col-phone bottom-right--desktop">
-							{# 4/12 desktop (bottom-right) | 8/8 tablet (6th row) | 4/4 phone (8th) #}
-							<object data="./static/img/open_hand__redyellow.svg"></object>
+						<div class="left-five--desktop mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+							{# 6/12 desktop (left-fifth) | 4/8 tablet (5th row left) | 4/4 phone (6th) #}
+							<h4>contact.</h4>
+							<p>me (at) nichchung (dot) com</p>
+							<p>github soundcloud twitter linkedin</p>
 						</div>
-					</div>
+						<div class="right-one--desktop mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+							<img class="portrait" src="static/img/drawing_face_edit__1.svg">
+						</div>
+                    </div>
 				</div>
 			</main>
+		{%- include 'footer.html' -%}
+		{%- block scripts -%}
+			<script src="//codeorigin.jquery.com/jquery-2.0.3.min.js"></script>
+			<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+			{%- block additional_js -%}{%- endblock -%}
+			<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+		{%- endblock -%}
+	</body>
 	</body>
 </html>
 
