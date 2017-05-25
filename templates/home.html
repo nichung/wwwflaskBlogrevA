@@ -6,45 +6,48 @@
 			<main class="mdl-layout__content">
 				<div class="page-content home-page__content">
 					<div class="mdl-grid mdl-grid--no-spacing">
-						<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet mdl-cell--4-col-phone top-center--desktop">
-							{# 12/12 desktop (top-center) | 4/8 tablet (top right) | 4/4 phone (2nd) #}
+						<div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone top-center--desktop">
+							{# 12/12 desktop (top-center) | 8/8 tablet (top center) | 4/4 phone (1st) #}
 							<h2>nicholas chung</h2>
 							<p>civic tech and policy.</p>
 						</div>
 					</div>
 					<div class="mdl-grid mdl-grid--no-spacing mdl-grid--flex">
 						<div class="left-one--desktop mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
-							{# 6/12 desktop (left-first) | 4/8 tablet (5th row right) | 4/4 phone (5th) #}
+							{# 6/12 desktop (left-first) | 4/8 tablet (2nd row left) | 4/4 phone (2nd) #}
 							<h4>projects.</h4>
 							{# link header to page with blog results on the following content: #}
 							<p>civic tech, policy, and open data.</p>
 						</div>
-						<div class="left-two--desktop mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
-							{# 6/12 desktop (left-second) | 4/8 tablet (5th row right) | 4/4 phone (5th) #}
+						<div class="left-two--desktop mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+							{# 6/12 desktop (left-second) | 4/8 tablet (2nd row right) | 4/4 phone (3rd) #}
 							<h4>writing.</h4>
 							{# link header to page with blog results on the following content: #}
 							<p>essays and other text-based projects.</p>
 						</div>
-						<div class="left-three--desktop mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
-							{# 6/12 desktop (left-third) | 4/8 tablet (5th row right) | 4/4 phone (5th) #}
+						<div class="left-three--desktop mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+							{# 6/12 desktop (left-third) | 4/8 tablet (3rd row left) | 4/4 phone (4th) #}
 							<h4>tools.</h4>
 							{# link header to page with blog results on the following content: #}
 							<p>documentation.</p>
 						</div>
-						<div class="left-four--desktop mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
-							{# 6/12 desktop (left-fourth) | 4/8 tablet (5th row right) | 4/4 phone (5th) #}
+						<div class="left-four--desktop mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+							{# 6/12 desktop (left-fourth) | 4/8 tablet (4th row right) | 4/4 phone (5th) #}
 							<h4>about.</h4>
 							{# link header to about page: #}
 							<p>who i am.</p>
 						</div>
 						<div class="left-five--desktop mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
-							{# 6/12 desktop (left-fifth) | 4/8 tablet (5th row left) | 4/4 phone (6th) #}
+							{# 6/12 desktop (left-fifth) | 8/8 tablet (5th row center) | 4/4 phone (6th) #}
 							<h4>contact.</h4>
 							<p>me (at) nichchung (dot) com</p>
 							<p>github soundcloud twitter linkedin</p>
 						</div>
-						<div class="right-one--desktop mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
-							<img class="portrait" src="static/img/drawing_face_edit__1.svg">
+						<div class="right-one--desktop mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone" id="port-2">
+							{# <img class="portrait" src="static/img/drawing_face_edit__2.svg"> #}
+							<object type="image/svg+xml" data="static/img/drawing_face_edit__2.svg" class="portrait" id="portrait-2">
+								portrait <!-- fallback image in css -->
+							</object>
 						</div>
                     </div>
 				</div>
@@ -55,6 +58,7 @@
 			<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 			{%- block additional_js -%}{%- endblock -%}
 			<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+			<script src="static/js/portrait.js"></script>
 		{%- endblock -%}
 	</body>
 	</body>
