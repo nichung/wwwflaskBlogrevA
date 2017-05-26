@@ -4,12 +4,16 @@ body {
 }
 
 /* general style: fonts */
-h1, .mdl-layout__title, .mdl-layout-title, .mdl-card__title-text {
+h1, h2, h3, h4, .mdl-layout__title, .mdl-layout-title, .mdl-card__title-text {
     font-family: 'Alfa Slab One', cursive;
 }
 
-body, h2, h3, h4, h5, h6, p, li, ul, span {
+body, h5, h6, p, li, ul, span {
     font-family: 'Crimson Text', serif;
+}
+
+a {
+    color: #333;
 }
 
 a:hover, a:focus {
@@ -23,6 +27,8 @@ a:hover, a:focus {
 
 .mdl-layout__content .blog-index__content .mdl-cell {
     margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* blog post */
@@ -57,7 +63,8 @@ main.mdl-layout__content {
     font-size: 20px;
 }
 
-.mdl-navigation__link:hover, .mdl-navigation__link:active {
+.mdl-navigation__link:hover, .mdl-navigation__link:active,
+.mdl-textfield .mdl-textfield__input {
     /* border-bottom: 10px solid #f9cc9d; */
     border-bottom: 10px solid rgba(205, 220, 57, 0.65);
 }
@@ -91,10 +98,19 @@ main.mdl-layout__content {
 
 /* nav bar: side */
 .mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover {
+    color: #fff;
 }
 
-.mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover {
-    color: #fff;
+/* search bar */
+.mdl-textfield__input {
+    width: initial;
+    padding-left: 25px !important;
+    padding-right: 5px !important;
+}
+
+.mdl-button--icon .material-icons {
+    top: 65%;
+    left: 4%;
 }
 
 /* post cards */
@@ -103,12 +119,6 @@ main.mdl-layout__content {
     margin-top: 0;
     /* margin-top: 6em;
     margin-bottom: 6em; */
-}
-
-.mdl-grid.mdl-grid--no-spacing>.mdl-cell,
-.post .mdl-grid .mdl-cell {
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .mdl-card__title {
@@ -213,54 +223,116 @@ main.mdl-layout__content {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 75px;
+    margin-top: 110px;
 }
 
 .home-page__content .mdl-grid--flex {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 600px;
+    height: 500px;
 }
 
 @media (max-width: 839px) and (min-width: 480px) {
-.mdl-layout__content .home-page__content .mdl-grid {
-    flex-direction: inherit;
-}
+    .mdl-layout__content .home-page__content {
+        width: 66.66666667%;
+        margin-top: 200px;
+    }
+
+    .home-page__content .mdl-grid .mdl-cell--4-col-tablet {
+        max-height: 8vh;
+    }
+
+    #interactive-portrait {
+        padding: 30px 0 0 50px;
+    }
+
+    .right-one--desktop {
+        min-height: 600px;
+    }
+
+    .left-one--desktop {
+        flex: 1 0;
+    }
+
+    .left-two--desktop {
+        flex: 2 0;
+    }
+
+    .left-three--desktop {
+        flex: 3 0;
+    }
+
+    .left-four--desktop {
+        flex: 4 0;
+    }
+
+    .left-five--desktop {
+        flex: 5 0;
+    }
+
+    .right-one--desktop {
+        min-height: 600px;
+    }
 }
 
 @media (max-width: 479px) {
-.mdl-layout__content .home-page__content .mdl-grid {
-    flex-direction: inherit;
+    .mdl-layout__content .home-page__content .mdl-grid {
+        flex-direction: inherit;
+    }
 }
+
+@media (min-width: 840px) {
+    .right-one--desktop {
+        min-height: 600px;
+        flex: 1 0;
+    }
+
+    .left-one--desktop {
+        flex: 2 0;
+    }
+
+    .left-two--desktop {
+        flex: 3 0;
+    }
+
+    .left-three--desktop {
+        flex: 4 0;
+    }
+
+    .left-four--desktop {
+        flex: 5 0;
+    }
+
+    .left-five--desktop {
+        flex: 6 0;
+    }
+
+    .home-page__content .mdl-grid .mdl-cell--6-col {
+        max-height: 10vh;
+        min-height:
+    }
 }
 
 .right-one--desktop {
     min-height: 600px;
 }
 
-.left-one--desktop {
-    flex: 1 0;
+/* home: type colors */
+.left-one--desktop a:hover, .left-one--desktop a:focus {
+    color: #7f54d4;
 }
 
-.left-two--desktop {
-    flex: 2 0;
+.left-two--desktop a:hover, .left-two--desktop a:focus {
+    color: #ffd454;
 }
 
-.left-three--desktop {
-    flex: 3 0;
+.left-three--desktop a:hover, .left-three--desktop a:focus {
+    color: #cddc39;
 }
 
-.left-four--desktop {
-    flex: 4 0;
-}
-
-.left-five--desktop {
-    flex: 5 0;
-}
-
-.home-page__content .mdl-grid .mdl-cell--6-col {
-    max-height: 10vh;
+.left-four--desktop a:hover, .left-four--desktop a:focus {
+    color: #00ffff;
 }
 
 /* home: animated portrait */
@@ -305,9 +377,5 @@ main.mdl-layout__content {
 
 .about-page__content .mdl-grid--no-spacing .mdl-cell,
 .about-page__content .mdl-grid--no-spacing .mdl-cell {
-    background-color: #d7dee0;
     height: 33.33vh;
-    border-style: solid;
-    border-width: 0 130px 170px 0;
-    border-color: transparent rgba(154, 168, 180, 0.65) rgba(128, 160, 187, 0.36) transparent;
 }

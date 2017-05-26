@@ -26,8 +26,8 @@
     });
     portrait.mousemove(function (event) {
         lineLeft.attr({
-            x2: event.pageX,
-            y2: event.pageY
+            x2: event.pageX - 150,
+            y2: event.pageY + 10
         });
     });
     portrait.mousemove(function (event) {

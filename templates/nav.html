@@ -41,15 +41,8 @@
         <a class="mdl-navigation__link" href="{{ url_for('blog_settings') }}">settings</a>
 		{% endif %}
     </nav>
-        {# <hr>
-        <form class="" method="post" action="{{ url_for('search') }}">
-        <div class="mdl-textfield mdl-js-textfield">
-            <textarea class="mdl-textfield__input" type="text">
-            <input type="text" name="query" class="form-control col-lg-8" placeholder="Search">
-            <input name="_csrf_token" type="hidden" value="{{ csrf_token() }}">
-            </textarea>
-        </div>
-        </form> #}
+        <hr>
+	{%- block search -%}{%- include 'search.html' -%}{%- endblock -%}
         <span class="mdl-layout-title">Recent posts</span>
         <nav class="mdl-navigation">
             {% for post in recent_posts %}
