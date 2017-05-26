@@ -379,3 +379,9 @@ main.mdl-layout__content {
 .about-page__content .mdl-grid--no-spacing .mdl-cell {
     height: 33.33vh;
 }
+
+/* interactive portrait */
+#portraitSVG {
+    max-height: 400px;
+    padding-right: 500px;
+}

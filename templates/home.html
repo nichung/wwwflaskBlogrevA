@@ -77,9 +77,10 @@
 						</div>
 						<div class="right-one--desktop mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
 							<div id="interactive-portrait">
-								<object type="image/svg+xml" data="static/img/drawing_face_edit__2.svg" class="portrait" id="portrait-object">
+								{%- block portrait -%}{%- include 'portrait.html' -%}{%- endblock -%}
+								{# <object type="image/svg+xml" data="static/img/drawing_face_edit__2.svg" class="portrait" id="portrait-object">
 									portrait <!-- fallback image in css -->
-								</object>
+								</object> #}
 							</div>
 						</div>
                     </div>
