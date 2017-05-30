@@ -6,7 +6,7 @@
 			<main class="mdl-layout__content">
 			<div class="page-content blog-index__content mdl-grid mdl-grid--no-spacing">
 				{%- block body -%}
-                <div class="mdl-cell mdl-cell--8-col post-loop">
+                <div class="mdl-cell mdl-cell--9-col post-loop">
 					{%- if posts -%}
 						{%- for post in posts -%}
                     <div class="post clearfix mdl-card mdl-shadow--2dp">
@@ -41,7 +41,7 @@
 					{% else %}
 						<div class="post clearfix">
 							<div class="mdl-grid">
-								<div class="mdl-cell mdl-cell--8-col">
+								<div class="mdl-cell mdl-cell--9-col">
 									<div class="page-header">
 										<h1>Posts not found..</h1>
 									</div>
@@ -49,7 +49,8 @@
 							</div>
 						</div>
 					{%- endif -%}
-                </div>
+				</div>
+					{%- include 'sidebar.html' -%}
 				{%- endblock -%}
 				{% if pagination and pagination.pages > 1 %}
 					<div class="pagination-wrap">
@@ -74,8 +75,10 @@
 		</div>
 		{%- include 'footer.html' -%}
 		{%- block scripts -%}
-			<script src="//codeorigin.jquery.com/jquery-2.0.3.min.js"></script>
-			<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+			<script src="static/js/jquery-2.0.3.min.js"></script>
+			<script src="static/js/bootstrap.min.js"></script>
+			{# <script src="//codeorigin.jquery.com/jquery-2.0.3.min.js"></script> #}
+			{# <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script> #}
 			{%- block additional_js -%}{%- endblock -%}
 			<script src="{{ url_for('static', filename='js/main.js') }}"></script>
 		{%- endblock -%}

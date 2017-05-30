@@ -2,11 +2,11 @@
 <html lang="en">
 	{%- block head -%}{%- include 'head.html' -%}{%- endblock -%}
 	<body>
-		{%- block nav -%}{%- include 'nav.html' -%}{%- endblock -%}
 			<main class="mdl-layout__content">
+				{%- block sidebar -%}{%- include 'sidebar.html' -%}{%- endblock -%}
 				<div class="page-content about-page__content">
 					<div class="mdl-grid mdl-grid--no-spacing">
-						<div class="left-desktop mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+						<div class="left-desktop mdl-cell mdl-cell--3-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
 							about
 						</div>
 						<div class="top-right--desktop mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">

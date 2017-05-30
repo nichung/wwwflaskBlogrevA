@@ -55,10 +55,10 @@ footer p {
 footer a {color: #d6d8dd;}
 
 .sidebar {
-	float: right;
+	/* float: right; */
 	position: absolute;
 	/* top: 92px; TODO: delete */
-	right: 5px;
+	/* right: 5px; */
 }
 .sidebar hr {margin-top:0;}
 .sidebar ul {padding:0;}
