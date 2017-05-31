@@ -1,4 +1,7 @@
 /* general styles */
+body {
+    /* background-color: #ccc; */
+}
 
 /* general style: fonts */
 h1, h2, h3, h4, .mdl-layout__title, .mdl-layout-title, .mdl-card__title-text {
@@ -7,10 +10,6 @@ h1, h2, h3, h4, .mdl-layout__title, .mdl-layout-title, .mdl-card__title-text {
 
 body, h5, h6, p, li, ul, span {
     font-family: 'Crimson Text', serif;
-}
-
-h4, h5, h6 {
-    margin: 0px;
 }
 
 a {
@@ -28,7 +27,8 @@ a:hover, a:focus {
 
 .mdl-layout__content .blog-index__content .mdl-cell {
     margin-top: 70px;
-    padding-left: 70px;
+    margin-left: auto;
+    /* margin-right: auto; */
 }
 
 /* blog post */
@@ -60,56 +60,137 @@ body {
     padding-top: 0px !important;
 }
 
+main.mdl-layout__content {
+    z-index: 0;
+}
+
 .mdl-layout__drawer-button {
     color: rgba(205, 220, 57, 0.65);
 }
 
 .mdl-navigation__link {
-    font-size: 16px;
-}
-
-.mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
-    padding: 4px 30px;
+    border-bottom: 3px solid transparent;
+    font-size: 20px;
 }
 
 .mdl-navigation__link:hover, .mdl-navigation__link:active,
 .mdl-textfield .mdl-textfield__input {
     /* border-bottom: 10px solid #f9cc9d; */
-    /* border-bottom: 10px solid rgba(205, 220, 57, 0.65); */
+    border-bottom: 10px solid rgba(205, 220, 57, 0.65);
 }
 
 .mdl-layout__container {
     position: inherit;
 }
 
-/* nav bar: side */
-.mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover {
-    background-color: none;
+.mdl-layout__header { /*horizontal gradient, top to bottom white */
+    background: #8e9eab; /* fallback for old browsers */
+    background: -webkit-linear-gradient(#8e9eab , #fff); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(#8e9eab , #fff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* background-color: #757575; */
 }
 
-.mdl-button--icon {
-    height: 0px;
+.mdl-layout__header {
+    background: #8e9eab; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #8e9eab , #eef2f3); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #8e9eab , #eef2f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* background-color: #757575; */
+}
+
+.mdl-layout-title a {
+    color: #fff;
+}
+
+/* nav bar: type formatting */
+.mdl-layout-title a {
+    color: #fff;
+}
+
+/* nav bar: side */
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover {
+    color: #fff;
+}
+
+/* search bar */
+.mdl-textfield__input {
+    width: initial;
+    padding-left: 25px !important;
+    padding-right: 5px !important;
 }
 
 .mdl-button--icon .material-icons {
-    left: 80%;
-    top: 45%;
+    top: 65%;
+    left: 4%;
 }
 
-.mdl-layout .mdl-layout__drawer>.mdl-layout-title {
-    padding-top: 20px;
-    padding-left: 35px;
-}
-
-@media (min-width: 840px) {
-    .navbar-form .mdl-grid {
-        padding: 8px 16px 8px 8px;
-    }
-}
-
-/* posts: user pages */
+/* post cards */
 .post {
     width: 100%;
+    margin-top: 0;
+    /* margin-top: 6em;
+    margin-bottom: 6em; */
+}
+
+.mdl-card__title {
+    max-height: 180px;
+}
+
+.mdl-card-a {
+    width: 100%;
+}
+
+.mdl-card-b {
+    width: 50%;
+    float: left;
+    margin: 0em 0em 0em 0;
+}
+
+.mdl-card-b:after {
+    width: 50%;
+    float: left;
+    margin-right: 0em;
+    clear: both;
+    display: block;
+}
+
+.mdl-card-c {
+    width: 50%;
+}
+
+.mdl-card-c:after {
+    width: 50%;
+    clear: both;
+    display: block;
+}
+
+.mdl-card {
+    max-height: 512px;
+    /* background-color: #d7dee0; */
+    border-radius: 0px;
+    margin: 40px auto 0 auto;
+}
+
+.mdl-card__supporting-text p {
+    margin: 0;
+}
+
+/* post cards: button and tag alignment */
+.mdl-card__actions {
+    display: inline-flex;
+}
+
+.card-bottom__wrapper {
+    float: left;
+}
+
+/* post cards: header text */
+.mdl-card__title-text a {
+    color: #000;
+}
+
+.mdl-card__title-text:hover,
+.mdl-card__title-text:active {
+    border-bottom: 10px solid rgba(205, 220, 57, 0.65);
 }
 
 /* post cards: about page */
@@ -132,6 +213,18 @@ body {
     background-color: #cddc39;
     opacity: 0.7;
     color: #fff;
+}
+
+.post img {
+    position: absolute;
+    left: -9999px;
+    right: -9999px;
+    top: -9999px;
+    bottom: -9999px;
+    margin: auto;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; */
 }
 
 /* home */

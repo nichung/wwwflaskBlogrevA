@@ -1,6 +1,3 @@
-{%- if recent_posts -%}
-<div class="mdl-cell mdl-cell--2-col sidebar">
-        <span class="mdl-layout-title">Nicholas Chung</span>
     <nav class="mdl-navigation">
         <a class="mdl-navigation__link" href="{{ url_for('home') }}"><h4>home</h4></a>
         <a class="mdl-navigation__link" href="{{ url_for('about') }}"><h4>about</h4></a>
@@ -11,13 +8,12 @@
         <a class="mdl-navigation__link" href="{{ url_for('posts') }}"><h4>posts</h4></a>
         <a class="mdl-navigation__link" href="{{ url_for('new_post') }}"><h4>new post</h4></a>
         <a class="mdl-navigation__link" href="{{ url_for('blog_settings') }}"><h4>settings</h4></a>
-		{% endif %}
+        {%- endif -%}
     </nav>
         <hr>
 	{%- block search -%}{%- include 'search.html' -%}{%- endblock -%}
         <span class="mdl-layout-title"><h4>Recent posts</h4></span>
         <nav class="mdl-navigation">
-            <hr>
             {% for post in recent_posts %}
             <a class="mdl-navigation__link" href="{{ url_for('single_post', permalink=post['permalink']) }}">{{ post['title'] | safe }}</a></li>
             {% endfor %}
@@ -25,11 +21,8 @@
         </nav>
         <span class="mdl-layout-title"><h4>Top Topics</h4></span>
         <nav class="mdl-navigation">
-            <hr>
             {% for tag in tags %}
             <a class="mdl-navigation__link" href="{{ url_for('posts_by_tag', page=1, tag=tag['title']) }}">{{ tag['title'] }} <sup class="badge">{{ tag['count'] }}</sup></a></li>
             {% endfor %}
         {%- endif -%}
         </nav>
-</div>
-{%- endif -%}
