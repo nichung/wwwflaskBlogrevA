@@ -12,14 +12,14 @@
     </nav>
         <hr>
 	{%- block search -%}{%- include 'search.html' -%}{%- endblock -%}
-        <span class="mdl-layout-title"><h4>Recent posts</h4></span>
+        <span class="mdl-layout-title"><h4>recent posts</h4></span>
         <nav class="mdl-navigation">
             {% for post in recent_posts %}
             <a class="mdl-navigation__link" href="{{ url_for('single_post', permalink=post['permalink']) }}">{{ post['title'] | safe }}</a></li>
             {% endfor %}
         {%- if tags -%}
         </nav>
-        <span class="mdl-layout-title"><h4>Top Topics</h4></span>
+        <span class="mdl-layout-title"><h4>top topics</h4></span>
         <nav class="mdl-navigation">
             {% for tag in tags %}
             <a class="mdl-navigation__link" href="{{ url_for('posts_by_tag', page=1, tag=tag['title']) }}">{{ tag['title'] }} <sup class="badge">{{ tag['count'] }}</sup></a></li>
